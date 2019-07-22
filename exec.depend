@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1563766398 source:c:\users\jose\documents\exec\main.cpp
+	<iostream>
+	<Windows.h>
+	<shlobj.h>
+	<winnls.h>
+	<shobjidl.h>
+	<objbase.h>
+	<objidl.h>
+	<shlguid.h>
+
+1563757380 c:\users\jose\documents\exec\shortcutprovider.cpp
+	<Windows.h>
+	<shlobj.h>
+	<winnls.h>
+	<shobjidl.h>
+	<objbase.h>
+	<objidl.h>
+	<shlguid.h>
+
+1563759737 c:\users\jose\documents\exec\shortcutprovider.h
+	<Windows.h>
+	<shlobj.h>
+	<winnls.h>
+	<shobjidl.h>
+	<objbase.h>
+	<objidl.h>
+	<shlguid.h>
+
+1563765160 source:c:\users\jose\documents\exec\shortcutprovider.cpp
+
