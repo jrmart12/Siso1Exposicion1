@@ -10,17 +10,17 @@ using namespace std;
 #include <shlguid.h>
 #include <winbase.h >
 
+
 HRESULT CreateLink(LPCSTR lpszPathObj, LPCSTR lpszPathLink, LPCSTR lpszDesc)
 {
+    CoInitialize(NULL);
     HRESULT hres;
     IShellLink* psl;
-cout<<"b";
     // Get a pointer to the IShellLink interface. It is assumed that CoInitialize
     // has already been called.
     hres = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (LPVOID*)&psl);
     if (SUCCEEDED(hres))
     {
-         cout<<"c";
         IPersistFile* ppf;
 
         // Set the path to the shortcut target and add the description.
@@ -33,7 +33,6 @@ cout<<"b";
 
         if (SUCCEEDED(hres))
         {
-            cout<<"a";
             WCHAR wsz[MAX_PATH];
 
             // Ensure that the string is Unicode.
@@ -62,7 +61,7 @@ void Hardlink(LPCSTR Filename,LPCSTR ExistingFileName){
 
 void Softlink(LPCSTR Filename,LPCSTR ExistingFileName){
   BOOL fCreatedLink;
-  //fCreatedLink = CreateSymbolicLinkA( Filename,ExistingFileName,0x0 );
+  //fCreatedLink = CreateSymbolicLink ( Filename,ExistingFileName,0x0 );
 
   if ( fCreatedLink == FALSE )
    {
@@ -78,7 +77,7 @@ int main() {
     cout << "Enter a Command: "<<endl;
     cin >>command>>file_path>>link_path;
     if(command=="shortcut"){
-        hr=CreateLink(file_path.c_str(),link_path.c_str(),"Shortcut to test.txt");
+        hr=CreateLink(file_path.c_str(),link_path.c_str(),"Shortcut");
         if (S_OK != hr)
         {
             cout<<"Failed to create shortcut"<<hr<<endl;

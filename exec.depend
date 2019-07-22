@@ -29,3 +29,14 @@
 
 1563765160 source:c:\users\jose\documents\exec\shortcutprovider.cpp
 
+1563773132 source:c:\users\jose\documents\github\siso1exposicion1\main.cpp
+	<iostream>
+	<windows.h>
+	<shlobj.h>
+	<winnls.h>
+	<shobjidl.h>
+	<objbase.h>
+	<objidl.h>
+	<shlguid.h>
+	<winbase.h >
+
